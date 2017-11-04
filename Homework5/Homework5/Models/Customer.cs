@@ -8,6 +8,8 @@ namespace Homework5.Models
 {
     public class Customer
     {
+        public int CustomerID { get; set; }
+
         [Required]
         public DateTime DOB { get; set; }
 
@@ -25,7 +27,7 @@ namespace Homework5.Models
 
         [Required, StringLength(256)]
         [Display(Name = "Address")]
-        public string Address { set; get; }
+        public string CAddress { set; get; }
 
         [Required, StringLength(256)]
         [Display(Name = "Mailing Address")]
@@ -41,12 +43,15 @@ namespace Homework5.Models
         [Display(Name = "City")]
         public string City { get; set; }
 
-        [Required, StringLength(256)]
+        [Required, StringLength(64)]
         [Display(Name = "State")]
-        public string State { get; set; }
+        public string CState { get; set; }
 
         [Required]
         [Display(Name = "Mailing Address")]
         public int Zipcode { get; set; }
+
+        [Display(Name = "Mailing State")]
+        public string MailingState { get; set; }
     }
 }
