@@ -192,10 +192,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\CustomerView.cshtml" />
+    <Content Include="Views\Home\CustomerDetails.cshtml" />
+    <Content Include="Views\Home\CustomerCreate.cshtml" />
+    <Content Include="Views\Home\CustomerDelete.cshtml" />
+    <Content Include="Views\Home\CustomerEdit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

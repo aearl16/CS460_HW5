@@ -33,10 +33,10 @@ namespace Homework5.Models
         [Display(Name = "Mailing Address")]
         public string MailingAddress { get; set; }
 
-        [Display(Name = "Mailing Address")]
+        [Display(Name = "Mailing City")]
         public string MailingCity { get; set; }
 
-        [Display(Name = "Mailing Zip")]
+        [Display(Name = "Mailing Zipcode")]
         public int MailingZip { get; set; }
 
         [Required, StringLength(64)]
@@ -48,7 +48,7 @@ namespace Homework5.Models
         public string CState { get; set; }
 
         [Required]
-        [Display(Name = "Mailing Address")]
+        [Display(Name = "Zipcode")]
         public int Zipcode { get; set; }
 
         [Display(Name = "Mailing State")]
