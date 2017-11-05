@@ -16,7 +16,7 @@ CREATE TABLE dbo.Customers
 	MailingState NVARCHAR(64),
 	CONSTRAINT [PK_dbo.Customers] PRIMARY KEY CLUSTERED (CustomerID ASC)
 );
-
+-- Insert Statement
 INSERT INTO dbo.Customers (LastName, FirstName, MiddleName, DOB, CAddress, City, CState, Zipcode, MailingAddress, MailingCity, MailingState, MailingZip) VALUES 
 	('Smith', 'John', 'Jacob', '1940-4-21', '1642 Columbus Way', 'Columbus', 'Ohio', 97442, '', '', '', 0),
 	('Bot', 'Hax', 'The','2942-12-12', '2001 Binary Rd.', 'Colony X', 'Mars', 101010, 'PO Box 16', 'Mars City', 'Mars', 101010);
