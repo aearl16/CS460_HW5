@@ -9,7 +9,7 @@ namespace Homework5.DAL
 {
     public class CustomerContext : DbContext
     {
-        public CustomerContext() : base("name=OutDBContext")
+        public CustomerContext() : base("name=OurDBContext")
         { }
 
         public virtual DbSet<Customer> Customers { get; set; }
