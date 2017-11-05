@@ -9,6 +9,9 @@ using System.Net;
 
 namespace Homework5.Controllers
 {
+    /// <summary>
+    /// Main controller for DMV forms
+    /// </summary>
     public class HomeController : Controller
     {
         private CustomerContext cc = new CustomerContext();
@@ -18,14 +21,8 @@ namespace Homework5.Controllers
             return View();
         }
 
-        //Customer GET
-        public ActionResult CustomerView()
-        {
-            return View(cc.Customers.ToList());
-        }
-
         // GET: Home/CustomerDetails/2
-        public ActionResult CustomerDetails(int? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -39,14 +36,44 @@ namespace Homework5.Controllers
             return View(cust);
         }
 
-        public ActionResult Delete()
+        //Get
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Customer cust = cc.Customers.Find(id);
+            if (cust == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cust);
         }
 
-        public ActionResult Edit()
+        //Post
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            return View();
+            Customer cust = cc.Customers.Find(id);
+            cc.Customers.Remove(cust);
+            cc.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Customer cust = cc.Customers.Find(id);
+            if (cust == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cust);
         }
 
         public ActionResult Create()
@@ -54,9 +81,33 @@ namespace Homework5.Controllers
             return View();
         }
 
+        //Post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,DOB,Address,City, CState, Zipcode")] Customer cust)
+        {
+            if (ModelState.IsValid)
+            {
+                cc.Customers.Add(cust);
+                cc.SaveChanges();
+                return RedirectToAction("CustomerList");
+            }
+
+            return View(cust);
+        }
+
         public ActionResult CustomerList()
         {
             return View(cc.Customers.ToList());
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                cc.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
