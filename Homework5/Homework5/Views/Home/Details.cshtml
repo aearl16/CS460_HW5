@@ -1,0 +1,114 @@
+﻿@model Homework5.Models.Customer
+
+@{
+    ViewBag.Title = "CustomerDetails";
+}
+
+<h2>CustomerDetails</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingState)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

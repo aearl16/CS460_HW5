@@ -14,9 +14,12 @@ namespace Homework5.Controllers
     /// </summary>
     public class HomeController : Controller
     {
+<<<<<<< HEAD
         /// <summary>
         /// The context for my Customer Model
         /// </summary>
+=======
+>>>>>>> HW5_Form
         private CustomerContext cc = new CustomerContext();
 
         public ActionResult Index()
@@ -25,11 +28,14 @@ namespace Homework5.Controllers
         }
 
         // GET: Home/CustomerDetails/2
+<<<<<<< HEAD
         /// <summary>
         /// Details for a specific customer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -45,11 +51,14 @@ namespace Homework5.Controllers
         }
 
         //Get
+<<<<<<< HEAD
         /// <summary>
         /// Delete method for Customers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -65,11 +74,14 @@ namespace Homework5.Controllers
         }
 
         //Post
+<<<<<<< HEAD
         /// <summary>
         /// Confirmation method for Delete
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -80,11 +92,14 @@ namespace Homework5.Controllers
             return RedirectToAction("Index");
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Edit Method for Customer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -99,21 +114,27 @@ namespace Homework5.Controllers
             return View(cust);
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Create method. Displays the creation view
         /// </summary>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         public ActionResult Create()
         {
             return View();
         }
 
         //Post
+<<<<<<< HEAD
         /// <summary>
         /// Create Post Method
         /// </summary>
         /// <param name="cust"></param>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,FirstName,LastName,DOB,Address,City, CState, Zipcode")] Customer cust)
@@ -128,10 +149,13 @@ namespace Homework5.Controllers
             return View(cust);
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Lists the customers in the SQL DB and displays them as a list
         /// </summary>
         /// <returns></returns>
+=======
+>>>>>>> HW5_Form
         public ActionResult CustomerList()
         {
             return View(cc.Customers.ToList());

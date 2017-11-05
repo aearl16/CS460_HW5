@@ -57,6 +57,7 @@ namespace Homework5.Models
         [Display(Name = "Mailing Address")]
         public string MailingAddress { get; set; }
 
+<<<<<<< HEAD
         /// <summary>
         /// Mailing City, Not required
         /// </summary>
@@ -66,6 +67,11 @@ namespace Homework5.Models
         /// <summary>
         /// Mailing Zip, not required
         /// </summary>
+=======
+        [Display(Name = "Mailing City")]
+        public string MailingCity { get; set; }
+
+>>>>>>> HW5_Form
         [Display(Name = "Mailing Zipcode")]
         public int MailingZip { get; set; }
 

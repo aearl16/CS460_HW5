@@ -192,13 +192,19 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\CustomerView.cshtml" />
     <Content Include="Views\CustomerCreate.cshtml" />
     <Content Include="Views\CustomerDelete.cshtml" />
     <Content Include="Views\CustomerEdit.cshtml" />
+=======
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\CustomerList.cshtml" />
+>>>>>>> HW5_Form
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

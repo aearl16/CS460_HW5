@@ -12,9 +12,12 @@ namespace Homework5.DAL
     /// </summary>
     public class CustomerContext : DbContext
     {
+<<<<<<< HEAD
         /// <summary>
         /// Superclass Constructor
         /// </summary>
+=======
+>>>>>>> HW5_Form
         public CustomerContext() : base("name=OurDBContext")
         { }
 
