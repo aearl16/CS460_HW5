@@ -13,6 +13,11 @@ namespace Homework5.Controllers
     {
         private CustomerContext cc = new CustomerContext();
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         //Customer GET
         public ActionResult CustomerView()
         {
@@ -34,38 +39,24 @@ namespace Homework5.Controllers
             return View(cust);
         }
 
-        public ActionResult CustomerDelete()
+        public ActionResult Delete()
         {
             return View();
         }
 
-        public ActionResult CustomerEdit()
+        public ActionResult Edit()
         {
             return View();
         }
 
-        public ActionResult CustomerCreate()
+        public ActionResult Create()
         {
             return View();
         }
 
-        public ActionResult Index()
+        public ActionResult CustomerList()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(cc.Customers.ToList());
         }
     }
 }
