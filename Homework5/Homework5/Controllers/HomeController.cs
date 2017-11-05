@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Homework5.Models;
+using Homework5.DAL;
 
 namespace Homework5.Controllers
 {
     public class HomeController : Controller
     {
+        private CustomerContext cc = new CustomerContext();
+
         public ActionResult Index()
         {
             return View();

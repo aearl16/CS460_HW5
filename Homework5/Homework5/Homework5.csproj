@@ -195,6 +195,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\CustomerView.cshtml" />
+    <Content Include="Views\CustomerCreate.cshtml" />
+    <Content Include="Views\CustomerDelete.cshtml" />
+    <Content Include="Views\CustomerEdit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
